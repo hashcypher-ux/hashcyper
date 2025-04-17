@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashcyper - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hashcyper</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <div class="hero">
+        <img src="hero.png" alt="Hashcyper Banner"/>
+    </div>
     <header>
         <h1>Hashcyper</h1>
         <nav>
@@ -19,31 +22,23 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Home</h2>
-            <p>This is the Home page. Content goes here.</p>
+        <section class="neon-card">
+            <h2>Welcome to Hashcyper</h2>
+            <p>Explore a futuristic world of innovation and tech vibes.</p>
         </section>
     </main>
     <footer>
         <p>© 2025 Hashcyper. All rights reserved.</p>
     </footer>
-    
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    sections.forEach(section => observer.observe(section));
-});
-</script>
-
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+    </script>
 </body>
 </html>

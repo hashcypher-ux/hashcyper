@@ -1,71 +1,65 @@
 
 body {
-    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
-    background: #f0f4f8;
-    animation: fadeInBody 1s ease-in-out;
-    overflow-x: hidden;
+    font-family: 'Orbitron', sans-serif;
+    background: #0b0c2a;
+    color: #e0e0ff;
+}
+.hero img {
+    width: 100%;
+    display: block;
+    height: auto;
 }
 header {
-    background: #111;
-    color: white;
-    padding: 1.5em 1em;
+    background: #111122;
+    padding: 1.5em 0;
     text-align: center;
-    animation: slideDown 0.8s ease-out;
+}
+header h1 {
+    color: #8a2be2;
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 0 0 10px #8a2be2;
 }
 nav a {
-    color: #00d1b2;
-    margin: 0 12px;
+    margin: 0 1em;
+    color: #00ffff;
     text-decoration: none;
+    font-weight: bold;
     position: relative;
-    transition: color 0.3s ease;
 }
 nav a::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 2px;
+    background: #00ffff;
     bottom: -4px;
     left: 0;
-    background-color: #00d1b2;
-    transition: width 0.3s;
+    transition: width 0.3s ease;
 }
 nav a:hover::after {
     width: 100%;
 }
-nav a:hover {
-    color: #00ffcc;
-}
 main {
     padding: 2em;
-    animation: fadeInMain 1.5s ease;
 }
-section {
+.neon-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.5s;
+    transform: translateY(40px);
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
 }
-section.visible {
+.neon-card.visible {
+    transform: translateY(0);
     opacity: 1;
-    transform: none;
 }
 footer {
     text-align: center;
-    padding: 1em;
-    background: #eee;
-    margin-top: 2em;
-}
-
-@keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-@keyframes fadeInMain {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    padding: 2em;
+    color: #666;
 }
